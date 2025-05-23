@@ -1,0 +1,304 @@
+/* === RESET & DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: linear-gradient(to right, rgba(255,182,193,0.7), rgba(255,105,180,0.7)),
+              url('gedung.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* === LOGIN PAGE === */
+.login-container {
+  width: 320px;
+  margin: 100px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+  animation: fadeInUp 1s ease;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #d63384;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f8bbd0;
+  border-radius: 6px;
+  transition: box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 5px #f06292;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #f06292, #ec407a);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ec407a, #f06292);
+}
+
+header {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: white;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+
+  /* Tambahkan margin kiri agar header bergeser ke kanan */
+  margin-left: 220px; /* sama dengan lebar sidebar + sedikit */
+}
+
+/* Optional: jika kamu ingin logo tetap dekat kiri header tapi tidak tertutup sidebar, bisa atur margin pada logo saja */
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  /* margin-left: 20px; */
+}
+
+/* Atau tambahkan padding kiri di header .profile jika perlu */
+header .profile {
+  text-shadow: 1px 1px 2px #d81b60;
+  /* margin-left: 20px; */
+}
+
+header .logo h1 {
+  margin-left: 22px;
+  font-size: `24px;
+  color: #fff;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header .profile {
+  text-shadow: 1px 1px 2px #d81b60;
+}
+
+/* === TOMBOL LOGOUT === */
+.logout-button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff80ab, #ec407a);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 105, 135, 0.4);
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #ec407a, #d81b60);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 105, 135, 0.6);
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 200px;
+  background: #f8bbd0;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  animation: slideInLeft 0.8s ease-in;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #880e4f;
+  text-decoration: none;
+  font-size: 18px;
+  transition: padding-left 0.2s ease-in;
+}
+
+.sidebar ul li a:hover {
+  background-color: #f48fb1;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+
+/* === MAIN CONTENT === */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.dashboard-overview {
+  margin-bottom: 40px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #ffe0ec;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  animation: zoomIn 0.5s ease;
+}
+
+.stat-box h3 {
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.academic-info,
+.Jadwal {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #ad1457;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #d81b60;
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(to right, #f8bbd0, #f48fb1);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* === ANIMASI === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* === RESPONSIF === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
+
+/* === TOMBOL LOGOUT === */
+.logout-button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff80ab, #ec407a);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 105, 135, 0.4);
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #ec407a, #d81b60);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 105, 135, 0.6);
+}
