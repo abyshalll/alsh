@@ -1,0 +1,2 @@
+# alsh
+tugas mulok
